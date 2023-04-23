@@ -6,10 +6,10 @@
     grid-template-rows: 1fr 2fr 2fr 1fr;
     grid-template-columns: repeat(4, 1fr);
     grid-template-areas:
-    'header header header header '
-    'aside  main main main'
-    'aside main main main'
-    'footer footer footer footer'
+        'header header header header '
+        'aside  main main main'
+        'aside main main main'
+        'footer footer footer footer'
     ;
 }
 
@@ -32,3 +32,33 @@ footer {
     grid-area: footer;
     background-color: lightpink;
 }
+
+/*media querys*/
+
+
+
+/*version tablet		width 800	height 1200*/
+@media screen and (max-width:800px) {
+      .contenedor {       
+        grid-template-areas:
+            'header header header header '
+            'aside  main main footer'
+            'aside main main footer'
+            'aside main main footer'
+        ;
+    }
+}
+
+/*version celular		width 360	height 640*/
+@media screen and (max-width:480px) {
+    .contenedor {       
+        grid-template-areas:
+            'header header header header '           
+            ' main main main main'
+            ' main main main main'
+            'aside  aside aside aside'
+            'footer footer footer footer'
+        ;
+    }
+}
+    
