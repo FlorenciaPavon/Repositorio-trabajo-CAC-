@@ -32,3 +32,30 @@ footer {
     grid-area: footer;
     background-color: lightpink;
 }
+
+
+
+/*version tablet		width 800	height 1200*/
+@media screen and (max-width:800px) {
+    .contenedor {       
+      grid-template-areas:
+          'header header header header '
+          'aside  main main footer'
+          'aside main main footer'
+          'aside main main footer'
+      ;
+  }
+}
+
+/*version celular		width 360	height 640*/
+@media screen and (max-width:480px) {
+  .contenedor {       
+      grid-template-areas:
+          'header header header header '           
+          ' main main main main'
+          ' main main main main'
+          'aside  aside aside aside'
+          'footer footer footer footer'
+      ;
+  }
+}
