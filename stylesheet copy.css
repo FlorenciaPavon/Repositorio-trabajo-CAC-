@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Oxygen:wght@300&family=Roboto+Condensed:ital,wght@0,300;0,400;1,700&family=Roboto+Flex:wght@300;400;700&display=swap');
+
+/*font-family: 'Itim', cursive;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Roboto Condensed', sans-serif;
+font-family: 'Roboto Flex', sans-serif;*/
+* {
+    padding: 0;   
+}
+
+
+.contenedor {          
+    align-content: center;    
+    display: grid;    
+    gap: 6px;
+    grid-template-rows: min-content 2fr 2fr min-content;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto; 
+    grid-template-areas:
+        'header header header header '
+        'aside  main main main'
+        'aside main main main'
+        'footer footer footer footer'
+    ;
+}
+
+header {       
+    margin: 0;    
+    grid-area: header;
+    background-color: rgba(250,50,10,255)  /*#fa320a*/;
+    display: flex;
+    align-items: center; 
+    justify-content: space-evenly;  
+    border-radius: 5px; 
+    box-shadow: 3px 3px 5px red;
+}
+
+.redes h3 {
+    color: rgb(239,217,33);
+    font-family: 'Oxygen', sans-serif;
+    font-size: 1.4rem;
+}
+
+.redes a {
+    padding: 0.8rem;
+    font-size: 2.5rem;
+}
+
+h1 {
+    text-shadow: .1rem .1rem rgb(240, 238, 238);
+}
+
+
+header li {
+    list-style: none;
+}
+
+/*slider*/
+
+.contenedor-slider {    
+    padding:0;
+    margin: 0;
+    width: 300px;
+    margin-left: 5%;
+    overflow: hidden;     
+}
+
+.contenedor-slider h3 {
+    padding: 0.3rem 0.3rem 0;
+    margin: 0;    
+    color: rgb(240, 238, 238); 
+    font-family: 'Oxygen', sans-serif;
+    font-style: oblique;
+}
+
+.slider-frame {
+    /*mismo tamaño que img*/    
+    width: 300px;
+    height: auto;    
+       
+    animation: slide 20s infinite alternate ease-in-out;
+}
+
+.slider-frame ul {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    
+    width: 500%; /*cada img equivale al 100%*/
+}
+
+.slider-frame li {
+    list-style: none;
+    width: 100%;
+    
+}
+
+.slider-frame img {
+    width: 300px;
+    
+}
+
+@keyframes slide {
+    0% {margin-left: 0%;}
+    15% {margin-left: 0%;}
+    
+    20% {margin-left: -100%;}
+    35% {margin-left: -100%;}
+
+    40% {margin-left: -200%;}
+    55% {margin-left: -200%;}
+
+    60% {margin-left: -300%;}
+    75% {margin-left: -300%;}
+
+    80% {margin-left: -400%;}
+    100% {margin-left: -400%;}
+}
+
+
+header h1, footer h1 {
+    color: rgb(239,217,33);
+    font-family: 'Roboto Condensed', sans-serif;    
+}
+
+#logo{
+    width:200px;     
+}
+
+.articulos {
+    padding: 1.5rem;
+}
+
+article {
+    max-height: 15rem;
+    overflow:hidden;
+}
+
+#ocultar-mostrar {
+    text-decoration: none;
+    color: red;
+}
+
+aside h1, main h1  {
+    color: rgb(250,50,10);
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+aside {    
+    grid-area: aside;
+    background-color: rgb(241,234,234);
+    border-radius: 5px;
+    padding-left: 1.5rem;
+}
+
+aside a {
+    text-decoration: none;
+    color: black;
+    font-family: 'Oxygen', sans-serif;
+    font-style: italic;    
+}
+
+aside ul {
+    padding:0;
+    margin:0;
+}
+
+
+aside h1 {
+    padding: 0;
+    margin:0;
+    font-weight: 800;
+}
+
+aside li {
+    list-style: none;
+    padding-left: 1rem;
+    font-weight: 800;
+}
+
+
+
+main {    
+    grid-area: main;
+    background-color:rgb(241,234,234);
+    border-radius: 5px;
+}
+
+footer {           
+    display: flex; 
+    justify-content: space-around;   
+    align-items: center; 
+    grid-area: footer;
+    background-color:#6f6f6f;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgb(85, 84, 84);
+}
+
+header a, footer a {
+    color: rgb(240, 238, 238);
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+
+/*formulario*/
+
+/*media querys*/
+
+
+
+/*version tablet		width 800	height 1200*/
+@media screen and (max-width:800px) {
+      .contenedor {       
+        grid-template-areas:
+            'header header header header '
+            'aside  main main footer'
+            'aside main main footer'
+            'aside main main footer'
+        ;
+    }
+        .contenedor-slider {
+            width: 300px;
+        }
+}
+
+/*version celular		width 360	height 640*/
+@media screen and (max-width:480px) {
+    .contenedor {       
+        grid-template-areas:
+            'header header header header '           
+            ' main main main main'
+            ' main main main main'
+            'aside  aside aside aside'
+            'footer footer footer footer'
+        ;
+    }
+    .contenedor-slider {
+        width: 300px;
+    }
+}
+    
